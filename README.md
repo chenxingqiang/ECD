@@ -5,14 +5,13 @@ Implementation of "[Evolutionary Community Detection in Dynamic Social Networks]
 If you find this method helpful for your research, please cite this paper.
 
     @INPROCEEDINGS{8852006, 
-    	author = {Fanzhen Liu and Jia Wu and Chuan Zhou and Jian Yang},
-    	booktitle = {2019 International Joint Conference on Neural Networks (IJCNN)},
-    	title = {Evolutionary Community Detection in Dynamic Social Networks},
-    	year = {2019},
-    	pages = {1-7},
-    	doi = {10.1109/IJCNN.2019.8852006}
+     author = {Fanzhen Liu and Jia Wu and Chuan Zhou and Jian Yang},
+     booktitle = {2019 International Joint Conference on Neural Networks (IJCNN)},
+     title = {Evolutionary Community Detection in Dynamic Social Networks},
+     year = {2019},
+     pages = {1-7},
+     doi = {10.1109/IJCNN.2019.8852006}
     }
-
 
 ----------
 
