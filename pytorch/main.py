@@ -86,13 +86,13 @@ def main():
     if flag == 1:
         # Synthetic networks
         dataset_name = 'syn_fix_3'  # Choose from: 'syn_fix_3', 'syn_fix_5', 'syn_var_3', 'syn_var_5', 'expand', 'mergesplit'
-        file_path = f"datasets/{dataset_name}.mat"
+        file_path = f"./ECD/datasets/{dataset_name}.mat"
         W_Cube, GT_Matrix = load_synthetic_dataset(file_path)
     elif flag == 2:
         # Real-world networks
         dataset_name = 'enron'  # Choose from: 'cell', 'enron'
-        data_file = f"datasets/{dataset_name}.mat"
-        gt_file = f"datasets/firststep_DYNMOGA_{dataset_name}.mat"
+        data_file = f"./ECD/datasets/{dataset_name}.mat"
+        gt_file = f"./ECD/datasets/firststep_DYNMOGA_{dataset_name}.mat"
         W_Cube, GT_Cube = load_realworld_dataset(data_file, gt_file)
     else:
         raise ValueError("Invalid flag value. Choose 1 for synthetic networks or 2 for real-world networks.")
