@@ -124,7 +124,7 @@ def ECD_1(
     Detect the community structure at the 1st time step
 
     Args:
-        adjacent_array: the adjacent matrix
+        adjacent_array(Torch.Tensor): the adjacent matrix
         maxgen: the maximum number of iterations
         pop_size: the population size
         p_mutation: the mutation rate
@@ -217,7 +217,7 @@ def ECD_2( adjacent_array,maxgen,pop_size,p_mutation,p_migration,p_mu_mi,num_nei
     Detect the community structure at the time step
 
     Args:
-        adjacent_array: the adjacent matrix
+        adjacent_array(Torch.Tensor ): the adjacent matrix
         maxgen: the maximum number of iterations
         pop_size: the population size
         p_mutation: the mutation rate
@@ -791,7 +791,7 @@ def evolve(
             if t == 0:
                 # Use ECD_1 for the first timestep
                 dynMod[t, r], dynPop[t], ECD_Result[t], dynTime[t, r] = ECD_1(
-                    adj_mat,
+                    torch.from_numpy(adj_mat),
                     maxgen,
                     pop_size,
                     p_mutation,
@@ -803,7 +803,7 @@ def evolve(
                 # Use ECD_2 for the following timesteps
                 pre_cluster = ECD_Result[t - 1][r]
                 dynMod[t, r], dynPop[t], ECD_Result[t], dynTime[t, r] = ECD_2(
-                    adj_mat,
+                    torch.from_numpy(adj_mat),
                     maxgen,
                     pop_size,
                     p_mutation,

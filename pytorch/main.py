@@ -138,7 +138,7 @@ def main():
                 ECD_Result[timestep_num],
                 dynTime[timestep_num, r],
             ) = ECD_2(
-                W_Cube[timestep_num],
+                torch.from_numpy(W_Cube[timestep_num]),
                 maxgen,
                 pop_size,
                 p_mutation,
