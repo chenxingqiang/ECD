@@ -1,6 +1,6 @@
 function [edge_begin_end] = CreatEdgeList(adjacent_array)
     [x, y, ~] = find (adjacent_array);
-    l = length(x); %�ߵ�����*2
+    l = length(x);
     edge_begin_end = zeros(l / 2, 3);
     j = 0;
 
